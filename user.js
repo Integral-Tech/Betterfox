@@ -233,6 +233,45 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+// PREF: do not allow embedded tweets, Instagram, Reddit, and Tiktok posts
+user_pref("urlclassifier.trackingSkipURLs", "");
+user_pref("urlclassifier.features.socialtracking.skipURLs", "");
+
+// PREF: enable HTTPS-Only Mode
+// Warn me before loading sites that don't support HTTPS
+// in both Normal and Private Browsing windows.
+user_pref("dom.security.https_only_mode", true);
+user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
+
+// PREF: set DoH provider
+user_pref("network.trr.uri", "https://dns.nextdns.io/9cb4c2");
+
+// PREF: enforce DNS-over-HTTPS (DoH)
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.max-fails", 5);
+
+// PREF: enforce certificate pinning
+// [ERROR] MOZILLA_PKIX_ERROR_KEY_PINNING_FAILURE
+// 1 = allow user MiTM (such as your antivirus) (default)
+// 2 = strict
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+// PREF: delete all browsing data on shutdown
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+user_pref("privacy.clearOnShutdown_v2.cache", true); // DEFAULT
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // DEFAULT
+user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // DEFAULT
+
+// PREF: after crashes or restarts, do not save extra session data
+// such as form content, scrollbar positions, and POST data
+user_pref("browser.sessionstore.privacy_level", 2);
+
+// PREF: disable all DRM content
+user_pref("media.eme.enabled", false);
+
+// PREF: hide the UI setting; this also disables the DRM prompt (optional)
+user_pref("browser.eme.ui.enabled", false);
+
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
 ****************************************************************************/
