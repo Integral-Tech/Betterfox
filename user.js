@@ -272,6 +272,13 @@ user_pref("media.eme.enabled", false);
 // PREF: hide the UI setting; this also disables the DRM prompt (optional)
 user_pref("browser.eme.ui.enabled", false);
 
+// PREF: disable login manager
+user_pref("signon.rememberSignons", false);
+
+// PREF: disable address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
+
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
 ****************************************************************************/
